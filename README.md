@@ -1,10 +1,10 @@
-#Author
-#Aditya Kumavat
-#Aman Jha
-#Yash Bora
-#Raviraj Verma
+# Author
+# Aditya Kumavat
+# Aman Jha
+# Yash Bora
+# Raviraj Verma
 
-#FoodCheck: Knowledge Distillation for Food Identification
+# FoodCheck: Knowledge Distillation for Food Identification
 
 FoodCheck is an innovative deep learning project hosted on GitHub that aims to revolutionize food identification through the power of knowledge distillation. Leveraging advanced machine learning techniques, this repository showcases a robust model trained to identify various food items accurately.
 
