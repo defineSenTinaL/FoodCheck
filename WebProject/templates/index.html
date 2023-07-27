@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Food Classifier</title>
+		<!-- Bootstrap CDN -->
+		<script
+			src="https://code.jquery.com/jquery-3.6.4.min.js"
+			integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+			crossorigin="anonymous"
+		></script>
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		/>
+
+		<!-- Custom CSS -->
+		<style>
+			.container {
+				margin-top: 50px;
+			}
+			.jumbotron {
+				background: linear-gradient(90deg, #3a7bd5, #00d2ff);
+			}
+			.btn-primary {
+				background: linear-gradient(90deg, #00d2ff, #3a7bd5);
+				border: none;
+			}
+			.btn-primary:hover {
+				background: linear-gradient(90deg, #3a7bd5, #00d2ff);
+				border: none;
+			}
+			.form-group {
+				margin-top: 30px;
+				text-align: center;
+			}
+			.file-input {
+				margin: auto;
+				margin-top: 20px;
+				background-color: azure;
+				border: 1px solid skyblue;
+			}
+			.file-name {
+				margin: auto;
+				margin-top: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="jumbotron">
+				<h1 class="text-center">Food Buddy</h1>
+			</div>
+			<form method="post" enctype="multipart/form-data">
+				<div class="form-group">
+					<label for="file" class="h4">Upload an image of food</label><br />
+					<input
+						type="file"
+						name="file"
+						id="file"
+						accept="image/*"
+						style="display: none"
+					/>
+					<input
+						type="button"
+						class="btn file-input"
+						onclick="document.getElementById('file').click();"
+						value="Choose File"
+					/><br />
+					<span id="file_name" class="file-name"></span>
+				</div>
+				<div class="form-group">
+					<button type="submit" class="btn btn-primary btn-lg">Submit</button>
+				</div>
+			</form>
+		</div>
+		<!-- Bootstrap JavaScript CDN -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		<script>
+			$("#file").on("input", function (event) {
+				let file_name = event.target.value.split("\\");
+				console.log(file_name);
+				file_name = file_name[file_name.length - 1];
+				console.log(file_name);
+				document.getElementById("file_name").innerHTML = file_name;
+			});
+		</script>
+	</body>
+</html>

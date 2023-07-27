@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image Classifier - Result</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+      }
+      h1 {
+        margin-top: 50px;
+      }
+      p {
+        font-size: 20px;
+        margin-top: 30px;
+      }
+      img {
+        margin-top: 30px;
+        max-width: 500px;
+      }
+      a {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 10px 20px;
+        background: linear-gradient(to bottom, #2ecc71, #27ae60);
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+      a:hover {
+        background: linear-gradient(to bottom, #27ae60, #2ecc71);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Result</h1>
+    <p>This is a {{ food }}.</p>
+    <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="Uploaded Image">
+    <br><br>
+    <a href="/">Upload another image</a>
+  </body>
+</html>
